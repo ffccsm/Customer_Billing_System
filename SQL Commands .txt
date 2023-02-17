@@ -1,0 +1,47 @@
+CREATE TABLE Customer(
+  customer_id int NOT NULL PRIMARY KEY,
+  Customer_Name varchar(10) NOT NULL,
+  Contact int NOT NULL);
+
+
+
+CREATE TABLE Billing_Account(
+  Billing_id int NOT NULL PRIMARY KEY,
+  Customer_id int NOT NULL,
+  Account_id int NOT NULL,
+  Bill_amount int NOT NULL,
+  Comments varchar(25));
+
+
+
+
+CREATE TABLE Accounts(
+  Account_id int NOT NULL PRIMARY KEY,
+  Customer_id int NOT NULL,
+  Account_number int NOT NULL,
+  Account_type_Id varchar(10) NOT NULL,
+  Balance int NOT NULL);
+
+
+CREATE TABLE Account_Type(
+Account_type_Id int NOT NULL PRIMARY KEY,
+  Account_type varchar(10));
+  
+ 
+
+
+
+insert into Customer(customer_id, Customer_Name, Contact) values (24700, 'Sohel', 01772628475);
+
+insert into Billing_Account(Billing_id, Customer_id, Account_id, Bill_amount, Comments) values (01, 24700, 24006445898, 500, 'NA');
+
+insert into Accounts(Account_id, Customer_id, Account_number, Account_Type_id, Balance) values (24006445898, 24700, 24006445898, 'VISA', 25000);
+
+insert into Account_Type(Account_type_id, Account_Type) values (2454544, 'VISA');
+
+
+
+
+
+
+
